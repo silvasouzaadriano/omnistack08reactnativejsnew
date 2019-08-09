@@ -1,0 +1,67 @@
+// Comando para criar o projeto 
+Forma mais usada: npx react-native init <nome do projet>
+Forma alternativa: (https://yarnpkg.com/lang/en/docs/cli/global/)
+Essa opção precisa configurar a variável global yarn no path
+1) yarn global add react-native-cli e depois rodar
+2) react-native init 
+
+Informações úteis após criar o projeto:
+Run instructions for iOS:
+    • cd tindev && react-native run-ios
+    - or -
+    • Open tindev/ios/tindev.xcodeproj in Xcode or run "xed -b ios"
+    • Hit the Run button
+
+  Run instructions for Android:
+    • Have an Android emulator running (quickest way to get started), or a device connected.
+    • cd tindev && react-native run-android
+
+
+// Instalar emulador mobile
+1) Acessar o endereço: https://docs.rocketseat.dev e seguir as instruções de acordo com a plataforma
+Pasta Android: /home/adriano/Android/Sdk
+ OU
+
+// Instalar o Android studio e também o SDK
+https://www.itzgeek.com/how-tos/linux/linux-mint-how-tos/how-to-install-android-studio-on-linux-mint-19-tara.html
+https://medium.com/@jeancabral/instalando-e-configurando-react-native-no-ubuntu-18-04-e3329ac090a0
+
+// Depois de instalado o Android studio, configurar o AVD Manager (https://medium.com/@wnyao0830/run-create-react-native-app-on-android-studios-emulator-ad678a0c362f)
+1) Abrir android studio:
+
+cd /opt/android-studio/bin/
+
+./studio.sh
+
+
+// Entã abrir o emulador criado no step anterior
+
+// Depois, dentro da pasta do projeto, rodar o comando
+1) yarn react-native run-android
+
+// Rodar a aplicação caso o bundle não seja carregado automaticamente
+yarn start / npm start
+
+//Dependências
+
+yarn add react-navigation react-native-gesture-handler react-native-reanimated
+
+react-navigation - Navegação básica
+react-native-gesture-handler - dependëncia do react-navigation para lidar com gestos do usuário
+react-native-reanimated - algumas transições de rotas possuem animações
+
+Para OS Linux e Windows, após a instalação das biblliotecas precisa ser configurado o arquivo MainActivity.java que se encontra na pasta android, seguindo as
+instruções da página (https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html), tópico Android. Basicamente
+copiando as linhas em roxo e colocando nas respectivas posições.
+
+Depois é precico rodar novamente o comando yarn react-native run-android 
+
+yarn add axios - para apis 
+quando for android náo esquecer de rodar o comando adb reverse tcp:3333 tcp:3333  parar ativar as portas
+
+yarn add @react-native-community/async-storage / depois precisa rodar o comando yarn react-native run-android
+
+
+
+
+yarn add axios
