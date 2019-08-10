@@ -25,16 +25,20 @@ export default function Login({ navigation }) {
     });;
   }, []);*/
 
-  async function handleLogin() {
-    //const response = await api.post('/devs', { username: user });
+  const [username, setUsername] = useState(""); // initializing the state which will store the input value
 
-    //const { _id } = response.data;
+  async function handleLogin() {
+    // Get the user from api
+    const response = await api.post("/devs", {
+      username: user
+    });
+
+    const { _id } = response.data;
+    //const _id = '5d49ff0d42680d506eba11d1';
 
     //await AsyncStorage.setItem('user', _id);
 
-    console.log("teste4");
-
-    navigation.navigate('Main');
+    navigation.navigate('Main', { user: _id });
   }
 
   return (

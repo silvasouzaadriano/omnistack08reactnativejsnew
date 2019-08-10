@@ -5,3 +5,6 @@ const api = axios.create({
 });
 
 export default api;
+
+//189.4.73.174%
+//192.168.0.7
